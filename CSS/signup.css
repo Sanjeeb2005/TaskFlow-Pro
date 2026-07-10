@@ -1,4 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: rgba(0, 68, 253, 0.616);
+}
 p{
     display: none;
     color: red;
+}
+header{
+    margin-top: 40px;
+    text-align: center;
+    line-height: 1.5;
+}
+#webName{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#formHeading{
+    font-size: 3vh;
+}
+form{
+    text-align: center;
+    margin-top: 40px;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 10px;
+    background-color: white;
+}
+label{
+    font-weight: 600;
+}
+input{
+    width: 100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    box-sizing:border-box;
+    outline: none;
+    color: rgba(0, 0, 0, 0.726);
+    text-align: center;
+}
+button{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
 }

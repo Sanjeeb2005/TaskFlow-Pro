@@ -8,27 +8,26 @@
 </head>
 <body>
     <header>
-        <h1>TaskFlow Pro</h1>
-        <h2>create an account</h2>
+        <h1 id="webName">TaskFlow Pro</h1>
+        <h2 id="formHeading">create an account</h2>
     </header>
     <main>
         <form id="signupForm">
             <label for="fullName">Fullname:</label>
-            <input type="text" id="fullName" name="fullName" placeholder="Enter Your Fullname">
+            <input type="text" id="fullName" name="fullName" placeholder="Enter Your Fullname" autocomplete="off">
             <p id="fullNameError"></p><br><br>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Enter Your Email"><br><br>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" autocomplete="off"><br><br>
             <p id="emailError"></p>
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" placeholder="Enter Your Password"><br><br>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password" autocomplete="off"><br><br>
             <p id="passwordError"></p>
             <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Your Password"><br><br>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Your Password" autocomplete="off"><br><br>
             <p id="confirmPasswordError"></p>
             <button type="submit">Create Account</button>
         </form>
     </main>
-    <footer></footer>
     
 
     <script src="/JavaScript/signup.js"></script>

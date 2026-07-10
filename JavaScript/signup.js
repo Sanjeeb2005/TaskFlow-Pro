@@ -27,7 +27,10 @@ signupForm.addEventListener('submit', function(event){
     }
     const email = emailInput.value.trim();
     const regex = /^[A-Za-z0-9._]+@[A-Za-z]+\.[A-Za-z]+$/;
-    if(!regex.test(email)){
+    if(email === ''){
+        emailError.textContent = 'Email Required';
+        emailError.style.display = 'block';
+    }else if(!regex.test(email)){
         emailError.textContent = 'Incorrect Email';
         emailError.style.display = 'block';
     }else{
@@ -35,7 +38,46 @@ signupForm.addEventListener('submit', function(event){
         emailError.style.display = 'none';
     }
     const password = passwordInput.value.trim();
+
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasNumber = /[0-9]/.test(password);
+    const hasSpecialCharacter = /[@#&%$!_+]/.test(password);
+    if(password === ''){
+        passwordError.textContent = 'Password Required';
+        passwordError.style.display = 'block';
+    }else if(!(password.length>=8 & password.length<=16)){
+        passwordError.textContent = 'Password must have 8 to 16 Characters';
+        passwordError.style.display = 'block';    
+    }else if(!hasUpperCase){
+        passwordError.textContent = 'Password must contain at least one Uppercase Letter';
+        passwordError.style.display = 'block';
+    }else if(!hasLowerCase){
+        passwordError.textContent = 'Password must contain at least one Lowercase Letter';
+        passwordError.style.display = 'block';
+    }else if(!hasNumber){
+        passwordError.textContent = 'Password must contain at least one number';
+        passwordError.style.display = 'block';
+    }else if(!hasSpecialCharacter){
+        passwordError.textContent = 'Password must contain at least one Special Characters';
+        passwordError.style.display = 'block';
+    }else{
+        passwordError.textContent = '';
+        passwordError.style.display = 'none';
+    }
+
     const confirmPassword = confirmPasswordInput.value.trim();
+    if(confirmPassword === ''){
+        confirmPasswordError.textContent = 'Confirm Password Required';
+        confirmPasswordError.style.display= 'block';
+    }else if(confirmPassword !== password){
+        confirmPasswordError.textContent = 'Passwords do not match';
+        confirmPasswordError.style.display = 'block';
+    }else{
+        confirmPasswordError.textContent = '';
+        confirmPasswordError.style.display = 'none';
+    }
+
 
     
 });
