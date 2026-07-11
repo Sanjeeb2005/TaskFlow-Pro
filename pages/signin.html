@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Pro | Sign-In</title>
+    <link rel="stylesheet" href="../Assets/CSS/signin.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome Back</h1>
+        <h2>Sign in to Your Account</h2>
+    </header>
+    <main>
+    <form id="signinForm">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+        <span id="emailError"></span><br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your Password">
+        <span id="passwordError"></span><br><br>
+        <div id="twoCollection">
+        <input type="checkbox" id="checkRemind">
+        <label for="checkRemind">Remember Me</label>
+        <a href="#" id="forgotPasswordLink">Forgot Password</a><br><br>
+        </div>
+        <button type="submit">Sign In</button>
+        <p id="signUpText">Don't have an account?<a href="#">Sign Up</a></p>
+
+    </form>
+    </main>
+
+    <script src="../Assets/JavaScript/signin.js"></script>
+</body>
+</html>
