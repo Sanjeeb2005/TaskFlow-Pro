@@ -1,0 +1,24 @@
+{
+  "name": "taskflow-pro",
+  "version": "1.0.0",
+  "description": "A modern full-stack task management application built with HTML, CSS, JavaScript, Node.js, Express.js, and PostgreSQL.",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanjeeb2005/TaskFlow-Pro.git"
+  },
+  "keywords": [],
+  "author": "Sanjeeb Batriya",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sanjeeb2005/TaskFlow-Pro/issues"
+  },
+  "homepage": "https://github.com/Sanjeeb2005/TaskFlow-Pro#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
