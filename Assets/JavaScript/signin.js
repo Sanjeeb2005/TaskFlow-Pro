@@ -7,6 +7,15 @@ const showHide = document.querySelector('.eye');
 const emailError = document.querySelector('#emailError');
 const passwordError = document.querySelector('#passwordError');
 
+const togglePassword = document.querySelector('#togglePassword');
+togglePassword.addEventListener('click', function(){
+    if(passwordInput.type === 'password'){
+        passwordInput.type = 'text';
+    }else{
+        passwordInput.type = 'password';
+    }
+});
+
 formInput.addEventListener('submit', function(event){
 
     event.preventDefault();
