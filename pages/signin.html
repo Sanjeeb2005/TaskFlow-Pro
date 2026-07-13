@@ -4,31 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskFlow Pro | Sign-In</title>
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
     <link rel="stylesheet" href="../Assets/CSS/signin.css">
 </head>
 <body>
     <header>
-        <h1>Welcome Back</h1>
-        <h2>Sign in to Your Account</h2>
-    </header>
-    <main>
+    <h1>Welcome Back</h1>
+    <h2>Sign in to your account</h2>
+</header>
+
+<main>
     <form id="signinForm">
+
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Enter your email">
-        <span id="emailError"></span><br><br>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+        >
+        <span id="emailError"></span>
+
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Enter your Password">
-        <span id="passwordError"></span><br><br>
-        <div id="twoCollection">
-        <input type="checkbox" id="checkRemind">
-        <label for="checkRemind">Remember Me</label>
-        <a href="#" id="forgotPasswordLink">Forgot Password</a><br><br>
+
+        <div class="password-box">
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+            >
+            <i class="ri-eye-line" id="togglePassword" class="eye"></i>
         </div>
-        <button type="submit">Sign In</button>
-        <p id="signUpText">Don't have an account?<a href="#">Sign Up</a></p>
+
+        <span id="passwordError"></span>
+
+        <div class="remember-forgot">
+            <div class="remember">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+
+            <a href="#" id="forgotPasswordLink">
+                Forgot Password?
+            </a>
+        </div>
+
+        <button type="submit">
+            Sign In
+        </button>
+
+        <p class="signup-text">
+            Don't have an account?
+            <a href="signup.html">Sign Up</a>
+        </p>
 
     </form>
-    </main>
+</main>
 
     <script src="../Assets/JavaScript/signin.js"></script>
 </body>

@@ -46,7 +46,7 @@ signupForm.addEventListener('submit', function(event){
     if(password === ''){
         passwordError.textContent = 'Password Required';
         passwordError.style.display = 'block';
-    }else if(!(password.length>=8 & password.length<=16)){
+    }else if(!(password.length>=8 && password.length<=16)){
         passwordError.textContent = 'Password must have 8 to 16 Characters';
         passwordError.style.display = 'block';    
     }else if(!hasUpperCase){

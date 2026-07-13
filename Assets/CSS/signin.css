@@ -3,8 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
+body{
+    min-height: 100vh;
     background-color: rgba(0, 38, 255, 0.591);
+}
+span{
+    display: none;
+    color: red;
 }
 header{
     text-align: center;
@@ -17,8 +22,6 @@ form{
     width: 380px;
     margin: auto;
     padding: 35px;
-    display: flex;
-    flex-direction: column;
     border-radius: 5px;
 }
 input{
@@ -26,6 +29,21 @@ input{
     padding: 8px;
     outline: none;
     text-align: center;
+}
+.password-box{
+    position: relative;
+}
+
+.password-box input{
+    width: 100%;
+}
+
+.password-box i{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 #twoCollection{
     margin-right: 2px;
