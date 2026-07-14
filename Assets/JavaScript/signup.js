@@ -78,6 +78,9 @@ signupForm.addEventListener('submit', function(event){
         confirmPasswordError.style.display = 'none';
     }
 
-
+    fetch('/signup',{
+        method: 'POST'
+        
+    });
     
 });
