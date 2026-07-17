@@ -78,9 +78,16 @@ signupForm.addEventListener('submit', function(event){
         confirmPasswordError.style.display = 'none';
     }
 
-    fetch('/signup',{
-        method: 'POST'
-        
+    fetch('http://localhost:3000/signup',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            fullName,
+            email,
+            password
+        })
     });
     
 });
