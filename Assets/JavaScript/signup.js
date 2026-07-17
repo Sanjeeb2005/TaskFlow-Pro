@@ -24,6 +24,7 @@ signupForm.addEventListener('submit', function(event){
     }else{
         nameError.textContent = '';
         nameError.style.display = 'none';
+        fullName.textContent = '';
     }
     const email = emailInput.value.trim();
     const regex = /^[A-Za-z0-9._]+@[A-Za-z]+\.[A-Za-z]+$/;
@@ -77,6 +78,7 @@ signupForm.addEventListener('submit', function(event){
         confirmPasswordError.textContent = '';
         confirmPasswordError.style.display = 'none';
     }
+    signupForm.reset();
 
     fetch('http://localhost:3000/signup',{
         method: 'POST',
