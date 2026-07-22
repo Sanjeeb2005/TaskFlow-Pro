@@ -10,7 +10,7 @@ const emailError = document.querySelector('#emailError');
 const passwordError = document.querySelector('#passwordError');
 const confirmPasswordError = document.querySelector('#confirmPasswordError');
 
-signupForm.addEventListener('submit', function(event){
+signupForm.addEventListener('submit', async function(event){
 
     event.preventDefault();
 
@@ -80,7 +80,7 @@ signupForm.addEventListener('submit', function(event){
     }
     signupForm.reset();
 
-    fetch('http://localhost:3000/signup',{
+    const response = await fetch('http://localhost:3000/signup',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -92,5 +92,7 @@ signupForm.addEventListener('submit', function(event){
             confirmPassword
         })
     });
+    const message = await response.text();
+    alert(message);
     
 });
