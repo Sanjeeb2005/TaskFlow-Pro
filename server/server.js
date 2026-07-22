@@ -8,15 +8,16 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/signup", function(req, res){
-    const {fullName, email, password} = req.body;
+    const {fullName, email, password, confirmPassword} = req.body;
     
-    if(!fullName || !email || !password){
+    if(!fullName || !email || !password || !confirmPassword){
         return res.status(404).send("All fields are required.");
     }
 
     console.log(fullName);
     console.log(email);
     console.log(password);
+    console.log(confirmPassword);
 
     res.send("signUp Successfully");
 });

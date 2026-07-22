@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 async function connectDB() {
     try {
-        await mongoose.connect('mongodb+srv://taskflow_admin:hKUkjli7KleLDeZL@cluster0.qeqlx54.mongodb.net/taskflowpro?retryWrites=true&w=majority&appName=Cluster0');
+        await mongoose.connect('mongodb+srv://taskflow_admin:KituBt@cluster0.qeqlx54.mongodb.net/taskflowpro?retryWrites=true&w=majority&appName=Cluster0');
 
         console.log('MongoDB Connected Successfully');
     } catch (error) {

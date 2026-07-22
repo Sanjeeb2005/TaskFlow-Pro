@@ -88,7 +88,8 @@ signupForm.addEventListener('submit', function(event){
         body: JSON.stringify({
             fullName,
             email,
-            password
+            password,
+            confirmPassword
         })
     });
     
