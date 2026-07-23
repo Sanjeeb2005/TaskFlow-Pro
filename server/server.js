@@ -14,6 +14,10 @@ app.post("/signup", async function(req, res){
     if(!fullName || !email || !password || !confirmPassword){
         return res.status(404).send("All fields are required.");
     }
+    const existingUser = await User.findOne({email});
+    if(existingUser){
+        return res.status(409).send("Email already exist");
+    }
 const user = new User({
     fullName,
     email,
